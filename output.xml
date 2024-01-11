@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-01-12T01:13:43.198225" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Successfully ToSwagLabs" source="C:\Users\g525585\PycharmProjects\SwagLabs\Tests\Login_Successfully_ToSwagLabs.robot">
+<test id="s1-t1" name="TestCase Jira ID 1" line="15">
+<kw name="Start_Test" owner="CommonKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-12T01:13:43.620686" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/'.</msg>
+<arg>${Promize_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-12T01:13:43.620186" elapsed="7.499947"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-12T01:13:51.120133" elapsed="0.124824"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.3</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-01-12T01:13:51.244957" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2024-01-12T01:13:43.618686" elapsed="7.627271"/>
+</kw>
+<kw name="Try_ToLogin_WithoutAdding_Email&amp;Password" owner="LoginKeywords">
+<kw name="Click_Login" owner="Login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_btn}</arg>
+<arg>${waitingtime}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-12T01:13:51.248958" elapsed="0.656161"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-12T01:13:51.905640" level="INFO">Clicking button 'xpath=//input[@id='login-button']'.</msg>
+<arg>${login_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-12T01:13:51.905640" elapsed="0.984603"/>
+</kw>
+<status status="PASS" start="2024-01-12T01:13:51.247957" elapsed="1.642286"/>
+</kw>
+<kw name="Check_MessageAppears_Incaseof_LeavingEmailEmpty" owner="Login">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Username is required</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-12T01:13:52.890243" elapsed="0.314724"/>
+</kw>
+<status status="PASS" start="2024-01-12T01:13:52.890243" elapsed="0.314724"/>
+</kw>
+<status status="PASS" start="2024-01-12T01:13:51.246957" elapsed="1.958510"/>
+</kw>
+<doc>Login_To_SwagLabs_Withoutadding_EmailORPassword</doc>
+<tag>Smoke , Regression</tag>
+<status status="PASS" start="2024-01-12T01:13:43.618187" elapsed="9.587280"/>
+</test>
+<test id="s1-t2" name="TestCase Jira ID 2" line="21">
+<kw name="Login_As_AnyUser" owner="LoginKeywords">
+<kw name="EnterEmail" owner="Login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${email_field}</arg>
+<arg>${waitingtime}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-12T01:13:53.208976" elapsed="0.636127"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-12T01:13:53.845603" level="INFO">Typing text 'standard_user' into text field 'xpath=//input[@id='user-name']'.</msg>
+<arg>${email_field}</arg>
+<arg>${Email_Value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-12T01:13:53.845603" elapsed="1.003928"/>
+</kw>
+<arg>${email_value}</arg>
+<status status="PASS" start="2024-01-12T01:13:53.208976" elapsed="1.640555"/>
+</kw>
+<kw name="EnterPassword" owner="Login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${password_field}</arg>
+<arg>${waitingtime}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-12T01:13:54.850030" elapsed="0.624804"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-12T01:13:55.475334" level="INFO">Typing text 'secret_sauce' into text field 'xpath=//input[@id='password']'.</msg>
+<arg>${password_field}</arg>
+<arg>${Password_Value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-12T01:13:55.474834" elapsed="1.043322"/>
+</kw>
+<arg>${password_value}</arg>
+<status status="PASS" start="2024-01-12T01:13:54.850030" elapsed="1.668126"/>
+</kw>
+<kw name="Click_Login" owner="Login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_btn}</arg>
+<arg>${waitingtime}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-12T01:13:56.519156" elapsed="0.629806"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-12T01:13:57.149963" level="INFO">Clicking button 'xpath=//input[@id='login-button']'.</msg>
+<arg>${login_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-12T01:13:57.149463" elapsed="35.702793"/>
+</kw>
+<status status="PASS" start="2024-01-12T01:13:56.518156" elapsed="36.334100"/>
+</kw>
+<status status="PASS" start="2024-01-12T01:13:53.208476" elapsed="39.643780"/>
+</kw>
+<doc>Login_To_PromizeSuccessfully</doc>
+<tag>Smoke , Regression</tag>
+<status status="PASS" start="2024-01-12T01:13:53.207476" elapsed="39.645780"/>
+</test>
+<status status="PASS" start="2024-01-12T01:13:43.203225" elapsed="49.651534"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">Smoke , Regression</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Login Successfully ToSwagLabs">Login Successfully ToSwagLabs</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-01-12T01:13:43.557842" level="ERROR">Error in file 'C:\Users\g525585\PycharmProjects\SwagLabs\Resources\Keywords\CommonKeywords.robot' on line 150: Creating keyword 'Scroll_To_END' failed: Keyword with same name defined multiple times.</msg>
+<msg time="2024-01-12T01:13:43.558842" level="ERROR">Error in file 'C:\Users\g525585\PycharmProjects\SwagLabs\Resources\Keywords\CommonKeywords.robot' on line 153: Creating keyword 'Scroll_Down_with_Argument' failed: Keyword with same name defined multiple times.</msg>
+<msg time="2024-01-12T01:13:43.558842" level="ERROR">Error in file 'C:\Users\g525585\PycharmProjects\SwagLabs\Resources\Keywords\CommonKeywords.robot' on line 157: Creating keyword 'Scroll_Middle_Page' failed: Keyword with same name defined multiple times.</msg>
+<msg time="2024-01-12T01:13:43.559843" level="ERROR">Error in file 'C:\Users\g525585\PycharmProjects\SwagLabs\Resources\Keywords\CommonKeywords.robot' on line 160: Creating keyword 'Scroll_End_Page' failed: Keyword with same name defined multiple times.</msg>
+<msg time="2024-01-12T01:13:43.559843" level="ERROR">Error in file 'C:\Users\g525585\PycharmProjects\SwagLabs\Resources\Keywords\CommonKeywords.robot' on line 163: Creating keyword 'Scroll_TO_600' failed: Keyword with same name defined multiple times.</msg>
+</errors>
+</robot>
